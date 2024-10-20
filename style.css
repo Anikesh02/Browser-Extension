@@ -1,0 +1,24 @@
+body {
+    width: 600px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    margin: 5px 0;
+  }
+  
+  #queryInput {
+    width: 70%;
+    margin-right: 5px;
+  }
+  
+  #resultsContainer div {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #resultsContainer div:hover {
+    background-color: #f0f0f0;
+  }

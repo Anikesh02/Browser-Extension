@@ -1,0 +1,141 @@
+[
+  {
+    "imageInfo": [
+      {
+        "alt": "Flipkart",
+        "height": 20,
+        "src": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png",
+        "width": 75
+      },
+      {
+        "alt": "",
+        "height": 10,
+        "src": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png",
+        "width": 10
+      },
+      {
+        "alt": "",
+        "height": 51,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/k/z/m/buds-f1-ultra-truke-original-imagy2n2mmadjgpx.jpeg?q=70&crop=false",
+        "width": 42
+      },
+      {
+        "alt": "",
+        "height": 53,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/k/z/m/buds-f1-ultra-truke-original-imagy2n2mmadjgpx.jpeg?q=70&crop=false",
+        "width": 44
+      },
+      {
+        "alt": "",
+        "height": 53,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/9/b/4/-original-imagxx6znyy2q3qq.jpeg?q=70&crop=false",
+        "width": 53
+      }
+    ],
+    "keywords": [
+      "with",
+      "truke",
+      "buds",
+      "audio",
+      "ultra",
+      "warranty",
+      "charging",
+      "price",
+      "bluetooth",
+      "battery"
+    ],
+    "metadata": {
+      "Description": "Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth for Rs.2999 Online, Also get truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Specs & Features. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+      "Keywords": "truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Price, Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Online, truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Features",
+      "al:ios:app_name": "Flipkart",
+      "al:ios:app_store_id": "742044692",
+      "fb:admins": "658873552,624500995,100000233612389",
+      "fb:page_id": "102988293558",
+      "msvalidate.01": "F4EEB3A0AFFDD385992A06E6920C0AC3",
+      "og:description": "Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth for Rs.2999 Online, Also get truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Specs & Features. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+      "og:image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/k/z/m/buds-f1-ultra-truke-original-imagy2n2mmadjgpx.jpeg",
+      "og:site_name": "Flipkart.com",
+      "og:title": "truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Price in India - Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Online - truke : Flipkart.com",
+      "og:type": "website",
+      "og_image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/k/z/m/buds-f1-ultra-truke-original-imagy2n2mmadjgpx.jpeg",
+      "og_site_name": "Flipkart.com",
+      "og_title": "truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Price in India - Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Online - truke : Flipkart.com",
+      "twitter:app:country": "in",
+      "twitter:app:id:googleplay": "com.flipkart.android",
+      "twitter:app:id:ipad": "742044692",
+      "twitter:app:id:iphone": "742044692",
+      "twitter:app:name:googleplay": "Flipkart",
+      "twitter:app:name:ipad": "Flipkart",
+      "twitter:app:name:iphone": "Flipkart",
+      "twitter:app:url:googleplay": "http://dl.flipkart.com/dl/home?",
+      "twitter:app:url:ipad": "http://dl.flipkart.com/dl/home?",
+      "twitter:app:url:iphone": "http://dl.flipkart.com/dl/home?",
+      "twitter:card": "app",
+      "twitter:creator": "@flipkart",
+      "twitter:description": "Shop for electronics, apparels & more using our Flipkart app Free shipping & COD.",
+      "twitter:image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/k/z/m/buds-f1-ultra-truke-original-imagy2n2mmadjgpx.jpeg",
+      "twitter:site": "@flipkart",
+      "twitter:title": "truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Price in India - Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Online - truke : Flipkart.com"
+    },
+    "summary": "Explore Plus\nLogin\nLOGIN\nNew customer. \nSign Up\nBecome a Seller\nMore\nCart\nElectronics\nTVs & Appliances\nMen\nWomen\nBaby & Kids\nHome & Furniture\nSports, Books & More\nFlights\nOffer Zone\nADD TO CART\n BUY NOW\nBig Diwali Sale Starts in10 hrs : 08 mins : 47 secs\nHomeAudio & VideoHeadsetEarphonesWireless EarphonesTrue Wirelesstruke True Wireless\n\ntruke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth (Black, True Wireless)\n\nCompare\nShare\ntruke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth  (Black, True Wireless)\n416,670 Ratings & 1,533 Reviews\nSpecial price\n₹1,099₹2,99963% off\ni\nAvailable offers\nBank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C\nSpecial PriceGet extra 63% off (price inclusive of cashback/coupon)T&C\n₹1000 off of next purchase of Ref or TVT&C\nPartner OfferMake a purchase and enjoy a surprise cashback/ coupon that you can redeem later. Know More\nView 2 more offers\n1 Year Warranty from date of purchase.",
+    "timestamp": "2024-10-20T08:21:13.698Z",
+    "title": "truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Price in India - Buy truke Buds F1 Ultra with 60 Hours Playtime, Spatial Audio, 13mm Drivers, Multi-modes Bluetooth Online - truke : Flipkart.com",
+    "url": "https://www.flipkart.com/truke-buds-f1-ultra-60-hours-playtime-spatial-audio-13mm-drivers-multi-modes-bluetooth/p/itmb796f4449fb68?pid=ACCGXYWDARFKZ6WJ&lid=LSTACCGXYWDARFKZ6WJ3NRPIS&marketplace=FLIPKART&q=truke%20f1%20ultra&sattr[]=color&st=color"
+  },
+  {
+    "imageInfo": [
+      {
+        "alt": "Screener Logo",
+        "height": 28,
+        "src": "https://cdn-static.screener.in/img/logo-black.f44abb4998d1.svg",
+        "width": 165
+      },
+      {
+        "alt": "Create a stock screen",
+        "height": 27,
+        "src": "https://cdn-static.screener.in/icons/screens.e960a5daedf9.svg",
+        "width": 26
+      },
+      {
+        "alt": "Premium icon",
+        "height": 12,
+        "src": "https://cdn-static.screener.in/icons/crown.fb0d2413ee43.svg",
+        "width": 14
+      },
+      {
+        "alt": "Commodity Prices",
+        "height": 23,
+        "src": "https://cdn-static.screener.in/icons/export.d623f0029933.svg",
+        "width": 29
+      },
+      {
+        "alt": "Search shareholders by name",
+        "height": 25,
+        "src": "https://cdn-static.screener.in/icons/shares.10acc20cb936.svg",
+        "width": 25
+      }
+    ],
+    "keywords": [
+      "query",
+      "sales",
+      "india",
+      "results",
+      "2024",
+      "screens",
+      "names",
+      "companies",
+      "page",
+      "name"
+    ],
+    "metadata": {
+      "author": "Mittal Analytics Private Limited",
+      "msapplication-TileColor": "#da532c",
+      "theme-color": "#222530",
+      "viewport": "width=device-width, initial-scale=1"
+    },
+    "summary": "HOME\nSCREENS\nTOOLS \n LOGIN\nGET FREE ACCOUNT\ncompany names\n GET EMAIL UPDATES\n\nFundamental scan passed companies names\n\nby Tushar\n\n24 results found: Showing page 1 of 1\n INDUSTRY\n EXPORT\n EDIT COLUMNS\nS. No. \tName\tCMP Rs.",
+    "timestamp": "2024-10-20T08:21:28.211Z",
+    "title": "company names - Screener",
+    "url": "https://www.screener.in/screens/233847/company-names/?utm_source=email&utm_medium=alerts&utm_campaign=screen-results"
+  }
+]

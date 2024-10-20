@@ -1,0 +1,85 @@
+[
+  {
+    "imageInfo": [
+      {
+        "alt": "Flipkart",
+        "height": 20,
+        "src": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png",
+        "width": 75
+      },
+      {
+        "alt": "",
+        "height": 10,
+        "src": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png",
+        "width": 10
+      },
+      {
+        "alt": "",
+        "height": 48,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/5/f/m/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2gfkt2g7f.jpeg?q=70&crop=false",
+        "width": 51
+      },
+      {
+        "alt": "",
+        "height": 50,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/5/f/m/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2gfkt2g7f.jpeg?q=70&crop=false",
+        "width": 53
+      },
+      {
+        "alt": "",
+        "height": 53,
+        "src": "https://rukminim2.flixcart.com/image/128/128/xif0q/headphone/d/w/d/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2n9tpfwyh.jpeg?q=70&crop=false",
+        "width": 53
+      }
+    ],
+    "keywords": [
+      "with",
+      "type",
+      "earphones",
+      "wired",
+      "gaming",
+      "price",
+      "flipkart",
+      "design",
+      "product",
+      "free"
+    ],
+    "metadata": {
+      "Description": "Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming for Rs.2699 Online, Also get Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Specs & Features. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+      "Keywords": "Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Price, Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Online, Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Features",
+      "al:ios:app_name": "Flipkart",
+      "al:ios:app_store_id": "742044692",
+      "fb:admins": "658873552,624500995,100000233612389",
+      "fb:page_id": "102988293558",
+      "msvalidate.01": "F4EEB3A0AFFDD385992A06E6920C0AC3",
+      "og:description": "Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming for Rs.2699 Online, Also get Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Specs & Features. Only Genuine Products. 30 Day Replacement Guarantee. Free Shipping. Cash On Delivery!",
+      "og:image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/5/f/m/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2gfkt2g7f.jpeg",
+      "og:site_name": "Flipkart.com",
+      "og:title": "Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Price in India - Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Online - Kreo : Flipkart.com",
+      "og:type": "website",
+      "og_image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/5/f/m/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2gfkt2g7f.jpeg",
+      "og_site_name": "Flipkart.com",
+      "og_title": "Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Price in India - Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Online - Kreo : Flipkart.com",
+      "twitter:app:country": "in",
+      "twitter:app:id:googleplay": "com.flipkart.android",
+      "twitter:app:id:ipad": "742044692",
+      "twitter:app:id:iphone": "742044692",
+      "twitter:app:name:googleplay": "Flipkart",
+      "twitter:app:name:ipad": "Flipkart",
+      "twitter:app:name:iphone": "Flipkart",
+      "twitter:app:url:googleplay": "http://dl.flipkart.com/dl/home?",
+      "twitter:app:url:ipad": "http://dl.flipkart.com/dl/home?",
+      "twitter:app:url:iphone": "http://dl.flipkart.com/dl/home?",
+      "twitter:card": "app",
+      "twitter:creator": "@flipkart",
+      "twitter:description": "Shop for electronics, apparels & more using our Flipkart app Free shipping & COD.",
+      "twitter:image": "http://rukmini1.flixcart.com/image/300/300/xif0q/headphone/5/f/m/hydra-type-c-in-ear-wired-earphones-with-mic-earphone-wire-original-imahfmh2gfkt2g7f.jpeg",
+      "twitter:site": "@flipkart",
+      "twitter:title": "Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Price in India - Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Online - Kreo : Flipkart.com"
+    },
+    "summary": "Explore Plus\nLogin\nLOGIN\nNew customer. \nSign Up\nBecome a Seller\nMore\nCart\nElectronics\nTVs & Appliances\nMen\nWomen\nBaby & Kids\nHome & Furniture\nSports, Books & More\nFlights\nOffer Zone\nADD TO CART\n BUY NOW\nBig Diwali Sale Starts in10 hrs : 09 mins : 10 secs\nHomeAudio & VideoHeadsetEarphonesWired EarphonesKreo Wired Earphones\n\nKreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming (Black1, Purple1, In the Ear)\n\nCompare\nShare\nKreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming  (Black1, Purple1, In the Ear)\n3. 677 Ratings & 8 Reviews\nSpecial price\n₹1,299₹2,69951% off\ni\nAvailable offers\nBank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C\nSpecial PriceGet extra 18% off (price inclusive of cashback/coupon)T&C\n₹1000 off of next purchase of Ref or TVT&C\nPartner OfferMake a purchase and enjoy a surprise cashback/ coupon that you can redeem later.",
+    "timestamp": "2024-10-20T08:20:50.507Z",
+    "title": "Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Price in India - Buy Kreo Hydra Type C In-Ear Wired Earphones with Mic, Earphone Wire, Tangle-free cable, Wired Gaming Online - Kreo : Flipkart.com",
+    "url": "https://www.flipkart.com/kreo-hydra-type-c-in-ear-wired-earphones-mic-earphone-wire-tangle-free-cable-gaming/p/itm52acbc91ad9ab?pid=ACCHYAPQ3S9AYGHZ&lid=LSTACCHYAPQ3S9AYGHZFXHKJR&marketplace=FLIPKART&store=0pm%2Ffcn%2F821%2Ffof&srno=b_1_1&otracker=browse&fm=productRecommendation%2Fsimilar&iid=en_-_Ws4POi_GGCUm3hJ8fl6CmBLplazBEpaFDX6Dbf18oQpDAfrtXCJ99xgGvB9ClSfZhCIFIrN4Agbte0ja2lfg%3D%3D&ppt=browse&ppn=browse&ssid=lbmmfxxgps0000001729411872190"
+  }
+]

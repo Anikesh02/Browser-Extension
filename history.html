@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Data Extractor</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #6c63ff;
+            --background-color: #f0f4f8;
+            --text-color: #333;
+            --card-background: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        #historyContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+       
+        .historyEntry {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .historyEntry:hover {
+            transform: translateY(-5px);
+        }
+
+        .historyEntry h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .historyEntry p {
+            margin: 10px 0;
+        }
+
+        .historyEntry .keywords {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .historyEntry .summary {
+            font-style: italic;
+            color: #555;
+        }
+
+        .historyEntry a {
+            color: var(--primary-color);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .historyEntry a:hover {
+            text-decoration: underline;
+        }
+
+        /* AI-inspired decoration */
+        .ai-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            z-index: 1000;
+        }
+        .ai-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ai-decoration"></div>
+    <div class="container">
+        <h1><div class="ai-icon"><img src="./logo.png"/></div> Web Data Extractor</h1>
+        <div id="historyContainer"></div>
+    </div>
+    <script src="history.js"></script>
+</body>
+</html>

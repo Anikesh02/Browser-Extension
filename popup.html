@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Semantic Web History</title>
+  <style>
+    :root {
+      --primary-color: #4a90e2;
+      --secondary-color: #6c63ff;
+      --background-color: #f0f4f8;
+      --text-color: #333;
+      --hover-color: #e0e7ff;
+    }
+    
+    body {
+
+      width: 350px;
+      padding: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border-radius: 50px;
+      margin: 0;
+    }
+    h1 {
+      color: var(--primary-color);
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #5753e0;
+    }
+    #queryInput {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    #resultsContainer {
+      margin-top: 20px;
+      overflow-y: auto;
+    }
+    #resultsContainer div {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+      transition: background-color 0.2s ease;
+    }
+    #resultsContainer div:hover {
+      background-color: var(--hover-color);
+    }
+    .search-container {
+      display: flex;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .ai-icon {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .ai-icon img {
+      width: 50px;
+      height: 50px;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="ai-icon"><img src="./logo.png"/></div>
+  <h1>AI-Powered Web History</h1>
+  <button id="toggleLogging">Start Logging</button>
+  <div class="search-container">
+    <input type="text" id="queryInput" placeholder="Enter your query">
+    <button id="queryButton">Search</button>
+  </div>
+  <div id="resultsContainer"></div>
+  <p style="text-align: center;"><a href="history.html" target="_blank">View Full History</a></p>
+  <script src="popup.js"></script>
+</body>
+</html>
