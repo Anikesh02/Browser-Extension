@@ -192,7 +192,10 @@ chrome.webNavigation.onBeforeNavigate.addListener(
       chrome.tabs.update(details.tabId, {url: chrome.runtime.getURL('api-response.html')});
     }
   },
-  {url: [{urlMatches : 'http://localhost/api/history'}]}
+  // {url: [{urlMatches : 'http://localhost/api/history'}]}
+  {url: [{urlMatches : 'https://logical-witty-ocelot.ngrok-free.app/api/history'}]}
+
+  
 );
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
