@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Web Data Extractor Version 3.0",
+  "name": "Web Data Extractor Version 5.0",
   "version": "1.0",
   "description": "Logs semantic information about visited web pages",
   "icons": {
@@ -12,7 +12,9 @@
     "activeTab",
     "storage",
     "tabs",
-    "downloads"
+    "downloads",
+    "webRequest",
+    "webNavigation"
   ],
   "host_permissions": [
     "<all_urls>"

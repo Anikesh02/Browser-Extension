@@ -1,6 +1,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "getPageInfo") {
     const pageInfo = extractPageInfo();
+    pageInfo.screenshot = request.screenshot;
     chrome.runtime.sendMessage({action: "storePageInfo", pageInfo: pageInfo});
   }
 });
@@ -11,7 +12,8 @@ function extractPageInfo() {
     title: document.title,
     keywords: extractKeywords(),
     summary: extractSummary(),
-    metadata: extractMetadata(),
+    description: extractMetadata().Description || '',
+    metaKeywords: extractMetadata().Keywords || '',
     imageInfo: extractImageInfo(),
     timestamp: new Date().toISOString()
   };

@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>Summary: ${result.summary}</p>
      <p>Images:</p>
       ${result.imageInfo.map(img => `<img src="${img.src}" alt="${img.alt}" style="max-width: 100px; max-height: 100px; margin: 5px;">`).join('')}
+      <p>Screenshot:</p>
+      ${result.screenshot ? `<img src="${result.screenshot}" alt="Page Screenshot" style="max-width: 300px; max-height: 300px; margin: 5px;">` : 'No screenshot available'}
     `;
     resultsContainer.innerHTML = '';
     resultsContainer.appendChild(detailsElement);

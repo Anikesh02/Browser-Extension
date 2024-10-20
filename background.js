@@ -33,7 +33,9 @@ function startLogging() {
   if (!tabUpdateListener) {
     tabUpdateListener = (tabId, changeInfo, tab) => {
       if (isLogging && changeInfo.status === 'complete' && tab.active) {
-        chrome.tabs.sendMessage(tabId, {action: "getPageInfo"});
+        captureScreenshot(tabId).then(screenshot => {
+          chrome.tabs.sendMessage(tabId, {action: "getPageInfo", screenshot: screenshot});
+        });
       }
     };
     chrome.tabs.onUpdated.addListener(tabUpdateListener);
@@ -46,6 +48,15 @@ function stopLogging() {
   if (tabUpdateListener) {
     chrome.tabs.onUpdated.removeListener(tabUpdateListener);
     tabUpdateListener = null;
+  }
+}
+
+async function captureScreenshot(tabId) {
+  try {
+    return await chrome.tabs.captureVisibleTab(null, {format: 'png'});
+  } catch (error) {
+    console.error('Error capturing screenshot:', error);
+    return null;
   }
 }
 
@@ -173,4 +184,23 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
         return true; 
     }
+});
+
+chrome.webNavigation.onBeforeNavigate.addListener(
+  function(details) {
+    if (details.url.endsWith('/api/history')) {
+      chrome.tabs.update(details.tabId, {url: chrome.runtime.getURL('api-response.html')});
+    }
+  },
+  {url: [{urlMatches : 'http://localhost/api/history'}]}
+);
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "getHistoryData") {
+    chrome.storage.local.get('history', (result) => {
+      const history = result.history || [];
+      sendResponse({ history: history });
+    });
+    return true;
+  }
 });

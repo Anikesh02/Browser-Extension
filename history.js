@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            historyContainer.innerHTML = ''; // Clear existing entries
+            historyContainer.innerHTML = ''; 
 
             history.reverse().forEach(entry => {
                 const entryElement = document.createElement('div');
@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="summary">Summary: ${entry.summary}</p>
                     <p>Images:</p>
                     ${entry.imageInfo.map(img => `<img src="${img.src}" alt="${img.alt}" style="max-width: 100px; max-height: 100px; margin: 5px;">`).join('')}
+                    <p>Screenshot:</p>
+                    ${entry.screenshot ? `<img src="${entry.screenshot}" alt="Page Screenshot" style="max-width: 300px; max-height: 300px; margin: 5px;">` : 'No screenshot available'}
                 `;
                 historyContainer.appendChild(entryElement);
             });
