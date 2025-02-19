@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
 });
 
+
 function extractPageInfo() {
   const pageInfo = {
     url: window.location.href,
@@ -15,7 +16,15 @@ function extractPageInfo() {
     description: extractMetadata().Description || '',
     metaKeywords: extractMetadata().Keywords || '',
     imageInfo: extractImageInfo(),
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    scrollPosition: {
+      x: window.scrollX,
+      y: window.scrollY
+    },
+    viewportSize: {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
   };
   return pageInfo;
 }
@@ -61,5 +70,5 @@ function extractImageInfo() {
     alt: img.alt,
     width: img.width,
     height: img.height
-  })).slice(0, 5);  
+  })).slice(0, 5);
 }

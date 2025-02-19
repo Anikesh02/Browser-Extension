@@ -2,54 +2,152 @@ let isLogging = false;
 let tabUpdateListener = null;
 let lastLoggedTimestamp = null;
 let lastSavedTimestamp = 0;
+let captureIntervals = new Map();
+
+chrome.storage.local.get(['isLogging'], (result) => {
+  isLogging = result.isLogging || false;
+  if (isLogging) {
+    startLogging();
+  }
+});
+
+const keepAlive = () => {
+  chrome.runtime.connect({ name: 'keepAlive' });
+  setTimeout(keepAlive, 20000);
+};
+keepAlive();
 
 chrome.runtime.onStartup.addListener(() => {
-  startLogging();
+  chrome.storage.local.get(['isLogging'], (result) => {
+    if (result.isLogging) {
+      startLogging();
+    }
+  });
 });
 
 chrome.runtime.onInstalled.addListener(() => {
-  startLogging();
+  chrome.storage.local.get(['isLogging'], (result) => {
+    if (result.isLogging) {
+      startLogging();
+    }
+  });
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "toggleLogging") {
     isLogging = request.value;
-    if (isLogging) {
-      startLogging();
-    } else {
-      stopLogging();
-    }
-    sendResponse({isLogging: isLogging});
+    chrome.storage.local.set({ isLogging: isLogging }, () => {
+      if (isLogging) {
+        startLogging();
+      } else {
+        stopLogging();
+      }
+      sendResponse({isLogging: isLogging});
+    });
+    return true;
   } else if (request.action === "queryHistory") {
     queryHistory(request.query).then(sendResponse);
     return true;
   } else if (request.action === "storePageInfo") {
     storePageInfo(request.pageInfo);
+  } else if (request.action === "getLoggingStatus") {
+    sendResponse({isLogging: isLogging});
+    return true;
   }
 });
 
+
 function startLogging() {
   isLogging = true;
+  chrome.storage.local.set({ isLogging: true });
   if (!tabUpdateListener) {
     tabUpdateListener = (tabId, changeInfo, tab) => {
-      if (isLogging && changeInfo.status === 'complete' && tab.active) {
+      if (isLogging && changeInfo.status === 'complete') {
         captureScreenshot(tabId).then(screenshot => {
           chrome.tabs.sendMessage(tabId, {action: "getPageInfo", screenshot: screenshot});
         });
+        startPeriodicCapture(tabId);
       }
     };
     chrome.tabs.onUpdated.addListener(tabUpdateListener);
   }
+  chrome.tabs.query({}, (tabs) => {
+    tabs.forEach(tab => {
+      startPeriodicCapture(tab.id);
+    });
+  });
+  
   scheduleNextLog();
 }
 
+
 function stopLogging() {
   isLogging = false;
+  chrome.storage.local.set({ isLogging: false });
   if (tabUpdateListener) {
     chrome.tabs.onUpdated.removeListener(tabUpdateListener);
     tabUpdateListener = null;
   }
+  for (let [tabId, interval] of captureIntervals) {
+    clearInterval(interval);
+  }
+  captureIntervals.clear();
 }
+
+chrome.tabs.onRemoved.addListener((tabId) => {
+  if (captureIntervals.has(tabId)) {
+    clearInterval(captureIntervals.get(tabId));
+    captureIntervals.delete(tabId);
+  }
+});
+
+chrome.tabs.onActivated.addListener((activeInfo) => {
+  if (isLogging) {
+    for (let [tabId, interval] of captureIntervals) {
+      if (tabId !== activeInfo.tabId) {
+        clearInterval(interval);
+        captureIntervals.delete(tabId);
+      }
+    }
+    startPeriodicCapture(activeInfo.tabId);
+  }
+});
+
+function startPeriodicCapture(tabId) {
+  if (captureIntervals.has(tabId)) {
+    clearInterval(captureIntervals.get(tabId));
+  }
+
+  const captureData = async () => {
+    if (isLogging) {
+      try {
+        const tab = await chrome.tabs.get(tabId).catch(() => null);
+        if (!tab) {
+          if (captureIntervals.has(tabId)) {
+            clearInterval(captureIntervals.get(tabId));
+            captureIntervals.delete(tabId);
+          }
+          return;
+        }
+
+        const screenshot = await captureScreenshot(tabId);
+        chrome.tabs.sendMessage(tabId, {
+          action: "getPageInfo",
+          screenshot: screenshot
+        }).catch(error => {
+          console.log('Tab may not be ready yet:', error);
+        });
+      } catch (error) {
+        console.error('Error in periodic capture:', error);
+      }
+    }
+  };
+
+  captureData();
+  const interval = setInterval(captureData, 5000);
+  captureIntervals.set(tabId, interval);
+}
+
 
 async function captureScreenshot(tabId) {
   try {
@@ -59,6 +157,13 @@ async function captureScreenshot(tabId) {
     return null;
   }
 }
+
+chrome.runtime.onConnect.addListener((port) => {
+  if (port.name === 'popup') {
+    port.postMessage({isLogging: isLogging});
+  }
+});
+
 
 async function storePageInfo(pageInfo) {
   try {
@@ -88,7 +193,7 @@ async function queryHistory(query) {
 
 function scheduleNextLog() {
   const now = Date.now();
-  const nextLogTime = now + 0.15 * 60 * 1000; 
+  const nextLogTime = now + 1 * 60 * 1000;
   setTimeout(logToFile, nextLogTime - now);
 }
 
@@ -112,7 +217,7 @@ async function sendRestRequest(entries) {
     const result = await response.json();
     console.log('Server response:', result);
   } catch (error) {
-    console.error('Error sending data to server:', error);
+    console.error('Error sending data to server', error);
     throw error;
   }
 }
@@ -208,7 +313,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 sendResponse({ success: false, error: 'No data to save' });
             }
         });
-        return true; 
+        return true;
     }
 });
 
@@ -218,7 +323,6 @@ chrome.webNavigation.onBeforeNavigate.addListener(
       chrome.tabs.update(details.tabId, {url: chrome.runtime.getURL('api-response.html')});
     }
   },
-  // {url: [{urlMatches : 'http://localhost/api/history'}]}
   {url: [{urlMatches : 'https://logical-witty-ocelot.ngrok-free.app/api/history'}]}
 
   

@@ -5,14 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const queryButton = document.getElementById('queryButton');
   const resultsContainer = document.getElementById('resultsContainer');
   
+  const port = chrome.runtime.connect({name: 'popup'});
 
-  let isLogging = false;
+  chrome.runtime.sendMessage({action: "getLoggingStatus"}, (response) => {
+    if (response) {
+      updateButtonState(response.isLogging);
+    }
+  });
 
   toggleButton.addEventListener('click', () => {
-    isLogging = !isLogging;
-    chrome.runtime.sendMessage({action: "toggleLogging", value: isLogging});
-    toggleButton.textContent = isLogging ? "Stop Logging" : "Start Logging";
+    chrome.runtime.sendMessage({
+      action: "toggleLogging",
+      value: toggleButton.textContent === "Start Logging"
+    }, (response) => {
+      if (response) {
+        updateButtonState(response.isLogging);
+      }
+    });
   });
+
+  function updateButtonState(isLogging) {
+    toggleButton.textContent = isLogging ? "Stop Logging" : "Start Logging";
+  }
+
 
   queryButton.addEventListener('click', () => {
     const query = queryInput.value;
