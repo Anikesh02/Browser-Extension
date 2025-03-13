@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Web Data Extractor Version 5.0",
+  "name": "Recall Extension",
   "version": "1.0",
   "description": "Logs semantic information about visited web pages",
   "icons": {
@@ -17,7 +17,10 @@
     "webNavigation"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "https://logical-witty-ocelot.ngrok-free.app/*",
+    "http://localhost:5000"
+    
   ],
   "background": {
     "service_worker": "background.js",

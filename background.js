@@ -2,6 +2,8 @@ let isLogging = false;
 let tabUpdateListener = null;
 let lastLoggedTimestamp = null;
 let lastSavedTimestamp = 0;
+let lastCaptureTime = 0;
+const CAPTURE_INTERVAL = 1000;
 let captureIntervals = new Map();
 
 chrome.storage.local.get(['isLogging'], (result) => {
@@ -144,12 +146,29 @@ function startPeriodicCapture(tabId) {
   };
 
   captureData();
-  const interval = setInterval(captureData, 5000);
+  const interval = setInterval(captureData, 1000);
   captureIntervals.set(tabId, interval);
 }
 
 
+// async function captureScreenshot(tabId) {
+//   try {
+//     return await chrome.tabs.captureVisibleTab(null, {format: 'png'});
+//   } catch (error) {
+//     console.error('Error capturing screenshot:', error);
+//     return null;
+//   }
+// }
+
 async function captureScreenshot(tabId) {
+  const now = Date.now();
+  if (now - lastCaptureTime < CAPTURE_INTERVAL) {
+    console.warn('Capture request ignored to avoid exceeding quota');
+    return null;
+  }
+
+  lastCaptureTime = now;
+
   try {
     return await chrome.tabs.captureVisibleTab(null, {format: 'png'});
   } catch (error) {
@@ -199,7 +218,8 @@ function scheduleNextLog() {
 
 
 async function sendRestRequest(entries) {
-  const serverUrl = 'https://logical-witty-ocelot.ngrok-free.app/log';
+  // const serverUrl = 'https://logical-witty-ocelot.ngrok-free.app/log';
+  const serverUrl = 'http://localhost:5000/log';
   
   try {
     const response = await fetch(serverUrl, {
